@@ -8,6 +8,6 @@ Use [the firmware specification](specification/reader.md) for observable behavio
 
 ## Plan, implement and verify
 
-Follow the [robot_serial_display SDD convention](../robot_serial_display/WORKFLOW.md). Before a substantial change, create a local packet at `.plans/YYYY/MM/DD/<topic>/plan.md`. Link the affected specification, describe the intended behavior, record consequential decisions as open or closed, and define observable exit checks. Update the durable spec when an agreement changes.
+Before a substantial change, create a local packet at `.plans/YYYY/MM/DD/<topic>/plan.md`. Link the affected specification, describe the intended behavior, record consequential decisions as open or closed, and define observable exit checks. Update the durable spec when an agreement changes.
 
-When implementation begins, add `implementation.md` to the same packet. Use the reference workflow's status and progress format. Record the actual PlatformIO environment, board, framework, dependency versions, build command and result. Track bench validation separately, including missing measurements or failed observations. Return results to Electro in `handoff-back.md` with links to the spec, implementation record and bench evidence.
+When implementation begins, add `implementation.md` to the same packet. Record the actual PlatformIO environment, board, framework, dependency versions, build command and result. Track bench validation separately, including missing measurements or failed observations. Return results to Electro in `handoff-back.md` with links to the spec, implementation record and bench evidence.

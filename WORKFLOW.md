@@ -11,7 +11,7 @@ For substantial work, open a packet following [the plans guide](plans/README.md)
 | Owner | Deliverable |
 | --- | --- |
 | Electro device project | Shared interfaces, acceptance criteria, editable PCB sources under pcb/ when available, integration and build records |
-| ESP32 firmware repo | Firmware contracts, code, dependency pins and build instructions. Use robot_serial_display as the SDD example. |
+| ESP32 firmware repo | Firmware contracts, code, dependency pins and build instructions. Use the firmware handoff and the target workspace's workflow for planning. |
 | cad-context and its designated model project | CAD workflow and enclosure model. Follow cad-context's project paths, cache and publication conventions. |
 | Device Drive folder | Datasheet snapshots, original measurements/photos, bench captures and named fabrication or print artifacts |
 | HomeSmartMesh website | Public article and reader-accessible assets following the website's content conventions |

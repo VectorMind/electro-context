@@ -2,9 +2,14 @@ id: nfc-reader
 drive_home: {root: drive_projects, path: nfc-reader}
 cache: {root: project, path: .cache}
 pcb: {root: project, path: pcb, status: planned}
-firmware: {root: dev, path: ESP32Home/nfc-reader, status: scaffolded}
+firmware:
+  root: dev
+  path: ESP32Home/nfc-reader
+  clone_url: https://github.com/ESP32Home/nfc-reader.git
+  status: scaffolded
 firmware_sdd_reference: {root: dev, path: ESP32Home/robot_serial_display}
 cad_workflow: {root: dev, path: VectorMind/cad-context}
+cad_model: {root: dev, path: VectorMind/model-projects/nfc-reader, status: handoff}
 website: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io}
 article: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io/content/microcontrollers/esp32/nfc-reader/readme.md, status: draft}
 project_readme: {root: project, path: README.md}
