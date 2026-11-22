@@ -2,4 +2,4 @@
 
 | Packet | Owner | Next action |
 | --- | --- | --- |
-| [NFC reader intake](2026-11/22/nfc-reader-intake/plan.md) | Electro device agent | [Install the website draft and verify the reader hardware](2026-11/22/nfc-reader-intake/implementation.md) |
+| [NFC reader firmware bring-up](2026-11/22/nfc-reader-firmware/plan.md) | ESP32 firmware workspace | [Firmware handoff](2026-11/22/nfc-reader-firmware/handoff.md) |

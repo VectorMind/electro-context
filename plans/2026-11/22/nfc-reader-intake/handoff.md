@@ -1,5 +1,7 @@
 # Handoff to the NFC reader intake agent
 
+The intake is closed. Continue with the [firmware handoff](../nfc-reader-firmware/handoff.md).
+
 Open projects/nfc-reader/ in electro-context. Read its AGENTS.md, project.yaml and spec.md, then [the intake plan](plan.md).
 
 First resolve board_reference and read c3-oled42.md with its linked sources. Check the device Drive folder for owner-supplied material. If the folder is missing, record that fact and continue with available sources. Record a short source inventory in the packet with repo-relative paths or Drive-relative filenames and what each supports.

@@ -19,6 +19,8 @@ Moved the website draft into the [project README](../../../../projects/nfc-reade
 
 Reviewed the owner's bench photo and the ESP32-C3 OLED schematic. The photo shows the PN532 four-pin header labels and the intended inward-facing headers. The schematic puts the OLED bus on GPIO5/GPIO6, on the opposite edge from USB 5V and GND. Recorded candidate wiring, a plug-in harness clearance method and a first enclosure layout in the [device specification](../../../../projects/nfc-reader/spec.md#enclosure-and-harness-concept). Supply, pull-ups, driver behavior, mechanical dimensions and tag read range remain bench checks.
 
+The owner selected the shared hardware I²C bus on GPIO5/GPIO6 and set the PN532 switches to 1 ON and 2 OFF, matching the I²C row on the board. Front and rear photos show the soldered four-wire harness, with black for GND, red for 5V to VCC, blue for GPIO5 to SDA and yellow for GPIO6 to SCL. The [README wiring sketch](../../../../projects/nfc-reader/README.md#as-built-wiring) documents that routing. Continuity, signal levels and the first scan have yet to be recorded.
+
 ## Website handoff
 
 Installation is pending. The session could read `C:\dev\HomeSmartMesh\homesmartmesh.github.io` but received access denied when creating the article directory. The ESP32 index, board page, board images and schematic matched Git HEAD and the index at the time of the check.

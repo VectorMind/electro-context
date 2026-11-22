@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 486" role="img" aria-labelledby="title description">
+  <title id="title">ESP32-C3 and PN532 bench wiring</title>
+  <desc id="description">Top view. ESP32 USB-C faces down. Its left-side GPIO5 and GPIO6 are connected underneath the board by blue and yellow wires to PN532 SDA and SCL. The right-side ESP32 GND and 5V go to PN532 GND and VCC via black and red wires. The PN532 is in I2C mode with switch 1 on and switch 2 off.</desc>
+  <defs>
+    <circle id="esp-pad" r="5.5" fill="#202044" stroke="#e8bd6c" stroke-width="2.5"/>
+    <circle id="nfc-pad" r="6" fill="#431312" stroke="#f4cb7c" stroke-width="3"/>
+    <path id="ground" d="M 301 334 C 490 334 457 151 657 151"/>
+    <path id="power" d="M 301 368 C 541 368 512 193 657 193"/>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; }
+      .title { fill: #1b293a; font-weight: 700; font-size: 22px; }
+      .pin { fill: #fff; font-weight: 600; font-size: 15px; }
+      .wire { fill: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .note { fill: #364456; font-size: 16px; }
+    </style>
+  </defs>
+
+  <rect width="960" height="486" rx="18" fill="#faf8f3"/>
+  <text class="title" x="60" y="54">ESP32-C3 OLED</text>
+  <text class="title" x="637" y="54">PN532 V3</text>
+
+  <rect x="62" y="82" width="252" height="306" rx="16" fill="#302b59" stroke="#211c41" stroke-width="2"/>
+  <rect x="113" y="142" width="132" height="97" rx="8" fill="#121726" stroke="#777793" stroke-width="3"/>
+  <text x="179" y="194" text-anchor="middle" fill="#ccd8f1" font-size="17">OLED</text>
+  <rect x="112" y="99" width="29" height="20" rx="4" fill="#abb2bb"/>
+  <rect x="217" y="99" width="29" height="20" rx="4" fill="#abb2bb"/>
+  <circle cx="126.5" cy="109" r="5.5" fill="#424657"/>
+  <circle cx="231.5" cy="109" r="5.5" fill="#424657"/>
+  <rect x="141" y="350" width="77" height="58" rx="8" fill="#b7c0c8" stroke="#596375" stroke-width="2"/>
+  <rect x="149" y="391" width="61" height="12" rx="6" fill="#263240"/>
+  <text class="note" x="179" y="434" text-anchor="middle">USB-C</text>
+
+  <g>
+    <use href="#esp-pad" x="75" y="130"/><use href="#esp-pad" x="75" y="164"/>
+    <use href="#esp-pad" x="75" y="198"/><use href="#esp-pad" x="75" y="232"/>
+    <use href="#esp-pad" x="75" y="266"/><use href="#esp-pad" x="75" y="300"/>
+    <use href="#esp-pad" x="75" y="334"/><use href="#esp-pad" x="75" y="368"/>
+    <use href="#esp-pad" x="301" y="130"/><use href="#esp-pad" x="301" y="164"/>
+    <use href="#esp-pad" x="301" y="198"/><use href="#esp-pad" x="301" y="232"/>
+    <use href="#esp-pad" x="301" y="266"/><use href="#esp-pad" x="301" y="300"/>
+    <use href="#esp-pad" x="301" y="334"/><use href="#esp-pad" x="301" y="368"/>
+  </g>
+  <text class="pin" x="88" y="135">3<tspan x="88" dy="34">4</tspan><tspan x="53" dy="34" text-anchor="end" fill="#176cbe">5</tspan><tspan x="53" dy="34" text-anchor="end" fill="#7b5900">6</tspan><tspan x="88" dy="34">7</tspan><tspan x="88" dy="34">8</tspan><tspan x="88" dy="34">9</tspan><tspan x="88" dy="34">10</tspan></text>
+  <text class="pin" x="286" y="135" text-anchor="end">0<tspan x="286" dy="34">1</tspan><tspan x="286" dy="34">2</tspan><tspan x="286" dy="34">TX</tspan><tspan x="286" dy="34">RX</tspan><tspan x="286" dy="34">3V3</tspan><tspan x="286" dy="34">GND</tspan><tspan x="286" dy="34">5V</tspan></text>
+
+  <rect x="637" y="82" width="263" height="306" rx="18" fill="#aa333b" stroke="#712330" stroke-width="2"/>
+  <rect x="648" y="93" width="241" height="284" rx="13" fill="none" stroke="#f9e4cd" stroke-width="4"/>
+  <rect x="728" y="123" width="134" height="203" rx="18" fill="none" stroke="#eebab2" stroke-width="2"/>
+  <rect x="735" y="130" width="120" height="189" rx="15" fill="none" stroke="#eebab2" stroke-width="2"/>
+  <rect x="767" y="194" width="57" height="52" rx="5" fill="#34323a" stroke="#eebab2" stroke-width="3"/>
+  <circle cx="671" cy="112" r="10" fill="#faf8f3" stroke="#d9ae68" stroke-width="4"/>
+  <circle cx="866" cy="358" r="10" fill="#faf8f3" stroke="#d9ae68" stroke-width="4"/>
+  <rect x="651" y="134" width="68" height="157" rx="8" fill="#7c2530"/>
+  <text class="pin" x="675" y="156">GND<tspan x="675" dy="42">VCC</tspan><tspan x="675" dy="42">SDA</tspan><tspan x="675" dy="42">SCL</tspan></text>
+  <text class="pin" x="772" y="352" text-anchor="middle">I²C · 1 ON / 2 OFF</text>
+
+  <g stroke-dasharray="7 7">
+    <path class="wire" d="M 75 198 C 137 198 103 252 171 252 H 314" stroke="#64b5ff"/>
+    <path class="wire" d="M 75 232 C 137 232 103 286 171 286 H 314" stroke="#ffd04b"/>
+  </g>
+  <path class="wire" d="M 314 252 C 437 252 533 235 657 235" stroke="#176cbe"/>
+  <path class="wire" d="M 314 286 C 438 286 537 277 657 277" stroke="#e1a000"/>
+  <use href="#power" fill="none" stroke="#faf8f3" stroke-width="12"/>
+  <use href="#power" class="wire" stroke="#c83a43"/>
+  <use href="#ground" fill="none" stroke="#faf8f3" stroke-width="12"/>
+  <use href="#ground" class="wire" stroke="#21232a"/>
+  <g>
+    <circle cx="75" cy="198" r="5" fill="#64b5ff"/><circle cx="75" cy="232" r="5" fill="#ffd04b"/>
+    <circle cx="301" cy="334" r="5" fill="#21232a"/><circle cx="301" cy="368" r="5" fill="#c83a43"/>
+    <use href="#nfc-pad" x="657" y="151"/><use href="#nfc-pad" x="657" y="193"/>
+    <use href="#nfc-pad" x="657" y="235"/><use href="#nfc-pad" x="657" y="277"/>
+    <circle cx="657" cy="151" r="5" fill="#21232a"/><circle cx="657" cy="193" r="5" fill="#c83a43"/>
+    <circle cx="657" cy="235" r="5" fill="#176cbe"/><circle cx="657" cy="277" r="5" fill="#e1a000"/>
+  </g>
+
+  <path d="M 344 427 h 31" fill="none" stroke="#176cbe" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 5"/>
+  <text class="note" x="389" y="433">Dashed leads run under the ESP32 PCB.</text>
+  <text class="note" x="389" y="458">Verify VCC and SDA/SCL levels before power-up.</text>
+</svg>

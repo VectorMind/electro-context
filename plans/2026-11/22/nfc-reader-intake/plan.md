@@ -1,6 +1,6 @@
 # NFC reader — initial specification
 
-**Owner** Electro device workspace. **State** Open.
+**Owner** Electro device workspace. **State** Closed. The [firmware bring-up](../nfc-reader-firmware/plan.md) carries forward the open bench checks.
 
 The hardware pair and documentation destination are known. The next agent needs to establish what the existing board notes support and which module details still depend on the owner.
 
@@ -10,4 +10,4 @@ The hardware pair and documentation destination are known. The next agent needs 
 
 **Exit checks** Every new hardware claim points to evidence. Unanswered questions have an owner or a concrete way to resolve them. Each proposed downstream task has an input and a verifiable output. Record the edits and remaining gaps in this packet. This intake covers documentation only.
 
-[Receiving agent instructions](handoff.md)
+[Original intake handoff](handoff.md) · [Intake results](implementation.md)

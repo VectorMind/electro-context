@@ -22,22 +22,29 @@ Illustrative board layout. Use the board markings and schematics for pin locatio
 - [Binghe PN532 NFC Module V3](https://www.amazon.de/-/en/dp/B0D86CPN5J). The listing shows a red breakout with a PCB antenna and a mode switch. Check the markings against the Elechouse reference before wiring.
 - The kit includes an S50 card for the first UID read test.
 
-## Pinout for the first bench test
+## As-built wiring
 
-Use the PN532's four-pin I²C header. The `nfc_audio` prototype used GPIO5 for SDA and GPIO6 for SCL, and the OLED reference schematic puts those pins on the edge opposite 5V and GND. Run the signal pair under the ESP32 board if the modules are placed side by side.
+The onboard OLED and the PN532 share the ESP32-C3's hardware I²C bus on **GPIO5 (SDA)** and **GPIO6 (SCL)**. Those are the pins printed **5** and **6** on the left edge with the OLED face up and USB-C toward you. The blue and yellow leads run under the ESP32. The black and red leads come from the opposite edge.
 
-- **SDA** connects ESP32-C3 GPIO5 to PN532 SDA.
-- **SCL** connects ESP32-C3 GPIO6 to PN532 SCL.
-- **Ground** is common to both boards.
-- **VCC** depends on the breakout. Verify the supply requirements, the I²C pull-up voltage and the available current before connecting it. The ESP32-C3 bus uses 3.3 V logic.
+![Top-view wiring sketch with black ground, red power, blue SDA and yellow SCL. Dashed signal wires run underneath the ESP32.](assets/bench-wiring.svg)
 
-The expected 7-bit addresses are `0x3C` for the OLED and `0x24` for the PN532. NXP gives the PN532 write address byte as `0x48`. The Elechouse V3 guide shows switch 1 **ON** and switch 2 **OFF** for I²C. Check the silkscreen on the Binghe board before applying power. Check whether the chosen driver needs separate IRQ or reset wires.
+| Wire | ESP32-C3 marking | PN532 front marking |
+| --- | --- | --- |
+| Black | GND | GND |
+| Red | 5V | VCC |
+| Blue | 5 (GPIO5) | SDA |
+| Yellow | 6 (GPIO6) | SCL |
+
+The PN532 uses the four-pad header, ordered **GND, VCC, SDA, SCL** as shown face up in the sketch. The reverse side labels the signal pads **TXD** and **RXD** for UART mode. The module's own legend shows **I²C = 1, 0**, and the switches are now set to **1 ON, 2 OFF**. The soldered harness has four wires. The firmware still needs a PN532 driver that supports I²C polling without IRQ or reset wires.
 
 ## Bench checks
 
-1. Identify the OLED on the I²C bus with the PN532 disconnected.
-2. With the module supply and bus levels verified, add the PN532 and read its firmware version. Check that the OLED still responds.
-3. Read the supplied S50 card, remove it and present it again. Record the UID read result before testing enclosure materials or measuring working distance.
+The wiring was checked against the front and rear photos. Electrical checks and communication results are pending.
+
+1. With USB disconnected, check end-to-end continuity and look for solder bridges between GPIO5 and GPIO6 and between 5V and GND.
+2. Verify that the actual breakout accepts 5 V at VCC and check its header-side SDA/SCL pull-ups with the ESP32 signal leads electrically isolated. The ESP32 side needs 3.3 V I²C levels.
+3. Initialize the shared bus once with `Wire.begin(5, 6, 100000)`. Scan for the OLED at `0x3C` and the PN532 at `0x24` (7-bit addresses). NXP also lists the PN532's shifted write address byte, `0x48`.
+4. Query the PN532 firmware version and check that the OLED still responds. Read the supplied S50 card, then remove and present it again. Record the UID read result before testing the lid or measuring read range.
 
 ## Datasheets and schematics
 
