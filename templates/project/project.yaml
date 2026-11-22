@@ -1,0 +1,7 @@
+id: "<device>"
+drive_home: {root: drive_projects, path: "<device>"}
+cache: {root: project, path: .cache}
+pcb: {root: project, path: pcb}
+firmware: {root: dev, path: "ESP32Home/<device>"}
+cad_workflow: {root: dev, path: VectorMind/cad-context}
+website: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io}

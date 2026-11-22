@@ -1,0 +1,4 @@
+# Closed plans
+
+| Packet | Result |
+| --- | --- |

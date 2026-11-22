@@ -1,0 +1,9 @@
+[project]
+name = "electro-context"
+version = "0.1.0"
+description = "Shared electronics design workflows and project context"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false

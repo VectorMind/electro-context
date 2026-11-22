@@ -1,0 +1,11 @@
+id: nfc-reader
+drive_home: {root: drive_projects, path: nfc-reader}
+cache: {root: project, path: .cache}
+pcb: {root: project, path: pcb, status: planned}
+firmware: {root: dev, path: ESP32Home/nfc-reader, status: planned}
+firmware_sdd_reference: {root: dev, path: ESP32Home/robot_serial_display}
+cad_workflow: {root: dev, path: VectorMind/cad-context}
+website: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io}
+article: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io/content/microcontrollers/esp32/nfc-reader.md, status: planned}
+board_reference: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io/content/microcontrollers/esp32/c3-oled42.md}
+article_example: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io/content/microcontrollers/esp32/thermostat-control.md}
