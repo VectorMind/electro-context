@@ -1,6 +1,6 @@
 # NFC Reader
 
-This project pairs an ESP32-C3 board with a PN532 breakout. The first milestone is to read a tag UID with the OLED and the reader on the same I²C bus. The [device specification](spec.md) tracks the design decisions and bench checks.
+The primary build pairs an **ESP32-C3** with a **PN532 V3** on a dedicated I²C bus and defaults to **Jewel/Topaz tags**. The onboard 0.42-inch OLED uses a separate bus for the scan prompt and UID. The owner confirmed Topaz detection using a WhizTags Topaz 512. The [device specification](spec.md) records the current interface and remaining bench checks.
 
 ## Board top views
 
@@ -10,41 +10,33 @@ This project pairs an ESP32-C3 board with a PN532 breakout. The first milestone 
 
 Reference photos from [Home Smart Mesh](https://homesmartmesh.github.io/microcontrollers/esp32/c3-oled42/) and [Cirkit Designer](https://docs.cirkitdesigner.com/component/64b18bca-1932-4bf5-854c-8dd0124534f1/nfcrfid-reader). Match both boards to the photos before wiring.
 
-## Side-by-side sketch
-
-![Concept sketch of the ESP32-C3 OLED and PN532 V3 boards side by side](assets/boards-side-by-side.webp)
-
-Illustrative board layout. Use the board markings and schematics for pin locations.
-
 ## Hardware
 
-- [diymore ESP32-C3 with 0.42-inch OLED](https://www.amazon.de/-/en/dp/B0GQL8YVPF). The board reference uses an SSD1306-compatible I²C OLED. Confirm the board revision before wiring.
-- [Binghe PN532 NFC Module V3](https://www.amazon.de/-/en/dp/B0D86CPN5J). The listing shows a red breakout with a PCB antenna and a mode switch. Check the markings against the Elechouse reference before wiring.
-- The kit includes an S50 card for the first UID read test.
+- [diymore ESP32-C3 with 0.42-inch OLED](https://www.amazon.de/-/en/dp/B0GQL8YVPF). Verify the board revision against the photo and schematic.
+- [Binghe PN532 NFC Module V3](https://www.amazon.de/-/en/dp/B0D86CPN5J). Match its markings and switch legend against the Elechouse reference.
+- **WhizTags Topaz 512** is the Jewel reference tag for the current build. Use it for the default scan mode.
 
-## As-built wiring
+## C3 wiring
 
-The onboard OLED and the PN532 share the ESP32-C3's hardware I²C bus on **GPIO5 (SDA)** and **GPIO6 (SCL)**. Those are the pins printed **5** and **6** on the left edge with the OLED face up and USB-C toward you. The blue and yellow leads run under the ESP32. The black and red leads come from the opposite edge.
+With the USB-C port facing down, GPIO0 and GPIO1 are the top two pads on the right edge. Connect the reader's four-pin header as shown.
 
-![Top-view wiring sketch with black ground, red power, blue SDA and yellow SCL. Dashed signal wires run underneath the ESP32.](assets/bench-wiring.svg)
+![ESP32-C3 GPIO0 to PN532 SDA and GPIO1 to SCL, with common ground and a conditional 5V lead.](assets/bench-wiring.svg)
 
-| Wire | ESP32-C3 marking | PN532 front marking |
-| --- | --- | --- |
-| Black | GND | GND |
-| Red | 5V | VCC |
-| Blue | 5 (GPIO5) | SDA |
-| Yellow | 6 (GPIO6) | SCL |
+| ESP32-C3 | PN532 front marking |
+| --- | --- |
+| GPIO0 | SDA |
+| GPIO1 | SCL |
+| GND | GND |
+| Verified reader supply | VCC |
 
-The PN532 uses the four-pad header, ordered **GND, VCC, SDA, SCL** as shown face up in the sketch. The reverse side labels the signal pads **TXD** and **RXD** for UART mode. The module's own legend shows **I²C = 1, 0**, and the switches are now set to **1 ON, 2 OFF**. The soldered harness has four wires. The firmware still needs a PN532 driver that supports I²C polling without IRQ or reset wires.
+The PN532 uses hardware I²C at **100 kHz**, 7-bit address **0x24**. The OLED stays on its board wiring, **GPIO5 SDA / GPIO6 SCL**, using software I²C at address **0x3C**. The two buses have separate pull-ups. With power removed, set PN532 **switch 1 ON and switch 2 OFF (1/0)** and power-cycle the breakout. [Board schematic](https://homesmartmesh.github.io/microcontrollers/esp32/c3-oled42/) · [Elechouse V3 guide](https://www.elechouse.com/elechouse/images/product/PN532_module_V3/PN532_%20Manual_V3.pdf)
 
 ## Bench checks
 
-The wiring was checked against the front and rear photos. Electrical checks and communication results are pending.
-
-1. With USB disconnected, check end-to-end continuity and look for solder bridges between GPIO5 and GPIO6 and between 5V and GND.
-2. Verify that the actual breakout accepts 5 V at VCC and check its header-side SDA/SCL pull-ups with the ESP32 signal leads electrically isolated. The ESP32 side needs 3.3 V I²C levels.
-3. Initialize the shared bus once with `Wire.begin(5, 6, 100000)`. Scan for the OLED at `0x3C` and the PN532 at `0x24` (7-bit addresses). NXP also lists the PN532's shifted write address byte, `0x48`.
-4. Query the PN532 firmware version and check that the OLED still responds. Read the supplied S50 card, then remove and present it again. Record the UID read result before testing the lid or measuring read range.
+1. With both boards off, check continuity and verify the PN532 supply against the actual breakout. With the C3 signal leads isolated, power the reader and confirm that the bus has adequate pull-ups and the ESP32-side SDA and SCL idle at 3.3 V. Use a bidirectional level shifter if the reader side is pulled to 5 V. Power down before reconnecting.
+2. Use the firmware repo's default `esp32c3` target and open the C3 native USB serial monitor at **115200 baud**. Check for an address ACK, a valid PN532 firmware version, `polling Jewel/Topaz only back-to-back`, and `removal debounce 250 ms`.
+3. With the OLED showing `SCAN` / `TAG`, present the Topaz 512. Expect one `Jewel tag UID:` line and the same four ID bytes on the OLED in two rows. Keep the tag in place to check duplicate suppression. Remove it until the console reports `Jewel tag removed` and the prompt returns, then present it again and compare the two UID reports.
+4. Record the C3 display result, removal and re-presentation, and any electrical measurements. The owner reports working Jewel detection. The latest firmware record confirms both builds and still lists C3 OLED visual checking and measured scan timing as pending.
 
 ## Datasheets and schematics
 
@@ -59,3 +51,17 @@ The wiring was checked against the front and rear photos. Electrical checks and 
 ## PCB
 
 The bench setup uses the two development boards. The [enclosure and harness concept](spec.md#enclosure-and-harness-concept) covers the board gap, the USB and display openings, and the coil-to-lid spacing for a first mockup.
+
+## ESP32-S2 Cucumber v1.1 reference
+
+### I²C comparison on the Cucumber
+
+The shared firmware can also build as `cucumber_s2_i2c` for the Gravitech Cucumber ESP32-S2-WROVER. Use **GPIO16 SDA / GPIO17 SCL**, common GND, and a verified VCC. The reader's front **SDA** and **SCL** positions are marked **TXD** and **RXD** on the back. The same 1/0 switch setting, 3.3 V pull-up checks, 100 kHz bus and `0x24` address apply. Use **DEBUG USB-C** for the FTDI UART0 monitor at **115200 baud, 8N1**, with OTG left unplugged. The Cucumber reports the tag over serial. [Gravitech Cucumber R](https://store.gravitechthai.com/product/cucumber-r-gravitech-esp32-s2-wifi-dev-board/11001005073001436) · [Elechouse V3 schematic](https://www.elechouse.com/elechouse/images/product/PN532_module_V3/PN532_shematic_drowing.pdf)
+
+### ESP32-S2 Cucumber v1.1 serial bench test
+
+The earlier HSU diagnostic used **GPIO17 TX → PN532 RXD** and **GPIO16 RX ← PN532 TXD** at 115200 baud, 8N1, with both switches OFF after a power cycle. The bench capture showed a valid outbound query and no full-swing reader ACK. This sketch records that comparison. The active firmware targets use I²C.
+
+![Reference sketch for the earlier Cucumber HSU wiring. GPIO17 goes to PN532 RXD and GPIO16 to TXD.](assets/cucumber-pn532-hsu.png)
+
+The Cucumber's DEBUG connector exposes UART0. OTG uses the ESP32-S2's native USB. If automatic entry to the bootloader fails, hold BOOT, tap RESET/EN and release BOOT. [ESP32-S2 boot mode guide](https://docs.espressif.com/projects/esptool/en/latest/esp32s2/advanced-topics/boot-mode-selection.html) · [Cucumber pinout](https://obrazki.elektroda.pl/6533666800_1590994173.png) · [PN532 rear photo](https://www.haljia.com/products/haljia-pn532-nfc-near-field-communication-rfid-v3-reader-writer-module-support-communication-with-mobile-compatible-with-arduino-raspberry-pi-diy-etc)

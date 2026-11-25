@@ -1,29 +1,30 @@
 # NFC reader device specification
 
-## Stated scope
+## Scope and hardware
 
-Bring up an NFC reader using an ESP32-C3 and a PN532 breakout. The first bench milestone is to communicate with the PN532 and read a tag UID. Audio belongs to the earlier prototype.
-
-## Starting hardware
-
-| Item | Evidence | Still to verify |
-| --- | --- | --- |
-| ESP32-C3 development board with 0.42-inch OLED | Owner identified the blue diymore board as the likely unit. The [retailer listing](https://www.amazon.de/-/en/dp/B0GQL8YVPF) is the purchase reference. The existing Home Smart Mesh board page has a photo and a schematic. | Match the actual unit to the board reference. |
-| PN532 NFC Module V3 breakout | Owner supplied the [Binghe listing](https://www.amazon.de/-/en/dp/B0D86CPN5J) for the red module, sold with an S50 card. The [Elechouse V3 guide](https://www.elechouse.com/elechouse/images/product/PN532_module_V3/PN532_%20Manual_V3.pdf) is a reference for this layout. | Match the PCB markings, switch legend and power circuit to the actual module. |
+The primary reader combines the diymore ESP32-C3 with a 0.42-inch OLED, a PN532 V3 breakout and **Jewel/Topaz** tags. The owner selected Jewel after confirming detection of a WhizTags Topaz 512. The original kit's S50 belongs to the earlier Type A comparison. [Hardware references and wiring](README.md#hardware)
 
 ## Selected interface
 
-Use one hardware I²C bus for the OLED and PN532, with SDA on GPIO5 and SCL on GPIO6. The earlier `nfc_audio` prototype used the same pins. The [ESP32-C3 OLED board schematic](https://homesmartmesh.github.io/microcontrollers/esp32/c3-oled42/) shows the OLED wired to those pins with 4.7 kΩ pull-ups to 3.3 V. The board photo and schematic place GPIO5 and GPIO6 on the opposite edge from 5V and GND. The schematic also shows that the 5V header comes from USB VBUS.
+| Interface | Assignment |
+| --- | --- |
+| PN532 hardware I²C | GPIO0 SDA, GPIO1 SCL, 100 kHz, 7-bit address `0x24` |
+| Onboard OLED software I²C | GPIO5 SDA, GPIO6 SCL, 7-bit address `0x3C`. The board schematic shows 4.7 kΩ pull-ups to 3.3 V on this bus. |
+| PN532 mode and harness | Switch 1 ON, switch 2 OFF (1/0), sampled at power-up. Four wires for GND, VCC, SDA and SCL. The firmware polls readiness over I²C. |
+| Serial console | C3 native USB at 115200 baud |
 
-For the first bench test, use the PN532's four-pin header. In the supplied photo, its labels read GND, VCC, SDA, SCL from top to bottom. ESP32 GND goes to GND, GPIO5 to SDA and GPIO6 to SCL. Use ESP32 5V for VCC only after checking that the actual breakout accepts that supply and that its header-side SDA/SCL idle at 3.3 V with suitable pull-ups. With the ESP32 signal wires disconnected, power the reader at the verified supply and measure both lines against GND. If either idles near 5 V, use a bidirectional I²C level shifter before connecting it. If the lines float, establish the pull-ups and recheck the idle voltage.
+Use separate 3.3 V-compatible pull-ups on the PN532 bus. Establish the reader supply and idle signal levels on the actual breakout before connecting the C3. Use a bidirectional level shifter if the reader side pulls SDA/SCL to 5 V. The C3 5V header comes from USB VBUS and is a supply option after those checks. [Bench procedure](README.md#bench-checks) · [C3 OLED schematic](https://homesmartmesh.github.io/microcontrollers/esp32/c3-oled42/)
 
-Expected 7-bit addresses are `0x3C` for the OLED and `0x24` for the PN532. An [I²C polling transport](https://github.com/elechouse/PN532/blob/PN532_HSU/PN532_I2C/PN532_I2C.cpp) reads the PN532's status byte and is a candidate for using the four-pin header alone. The prototype passed `0xFF` for IRQ and reset to the [Adafruit PN532 I²C constructor](https://github.com/adafruit/Adafruit-PN532/blob/master/Adafruit_PN532.cpp), which configures both supplied GPIOs. Verify the chosen driver with a firmware-version query followed by UID reads.
+## Tag and display behavior
 
-GPIO0/GPIO1 were considered to keep all leads on the power edge. The OLED's fixed GPIO5/GPIO6 wiring and the C3's single hardware I²C controller favored the shared bus. The soldered harness and the confirmed PN532 I²C switch setting are recorded in the [README](README.md#as-built-wiring).
+- The firmware defaults to `Jewel/Topaz only` and starts the next scan as soon as the previous one completes. Actual scan cadence depends on the response and recovery path.
+- A valid Jewel response yields a four-byte identifier. Report it on first detection in byte order with leading zeros. The OLED shows eight uppercase hex digits split into two rows of four. Show `SCAN` / `TAG` at startup and after confirmed removal.
+- A valid empty scan starts the **250 ms removal debounce**. Confirm removal on a later valid empty scan at or after the threshold and rearm the same ID. A valid tag read or transport error clears the pending removal. An I²C error does not count as an empty field.
+- Firmware also offers Type A and mixed scan modes through its built-in settings. Jewel only is the selected device default.
 
 ## Enclosure and harness concept
 
-Keep both PCBs face up, with the ESP32 on the left, USB-C toward the near wall, and the PN532 on the right with its four-pin header facing inward. Solder the harness with both boards out of the enclosure. Route the SDA/SCL pair along the underside of the ESP32 to the facing edge. Route all four insulated wires through the gap, with independent power and signal leads to accommodate the header order. Leave a small service loop and strain-relieve the wires to the base.
+Keep both PCBs face up, with the ESP32 on the left, USB-C toward the near wall, and the PN532 on the right with its four-pin header facing inward. Solder the harness with both boards out of the enclosure. Route all four insulated reader leads from the facing C3 edge through the gap. Keep power and signal leads identifiable at both ends. Leave a small service loop and strain-relieve the wires to the base.
 
 | Feature | First prototype allowance |
 | --- | --- |
@@ -37,11 +38,10 @@ Keep both PCBs face up, with the ESP32 on the left, USB-C toward the near wall, 
 
 Measure PCB outlines, hole centers and diameters, maximum component and underside heights, USB-C plug clearance, and the OLED and button centers on the actual hardware. The allowances above are mockup dimensions pending fit and read tests.
 
-## Hardware decisions and bench checks
+## Bench verification
 
-1. Check the reader markings and verify the module supply requirements and where the I²C pull-ups are tied. Confirm 3.3 V bus levels and adequate supply headroom before attaching the module to the ESP32-C3.
-2. Check the OLED by itself, then add the PN532 in I²C mode with power off during rewiring. Verify that the OLED and PN532 coexist and that a PN532 firmware-version command succeeds.
-3. Read the supplied card UID repeatedly and check that the reader detects it again after removal and re-presentation.
-4. Use the interface and power results to decide wiring and connectors. Measure the module’s mounting points and read range through the intended face material before setting enclosure dimensions.
+The owner reports working Jewel detection. The firmware implementation record confirms builds for the current C3 OLED and shared back-to-back Jewel configuration. Complete the C3 power and bus-level checks, compare the on-panel digits with the serial UID, and record hold, removal, re-presentation and scan latency on the current image. Measure the module's mounting points and read range through the intended face material before setting enclosure dimensions. Supply measurements, final connector and PCB layout remain open.
 
-Supply and signal levels, supported tags, the final connector and PCB layout remain open. See the [project README](README.md) for the illustrated hardware overview and the [intake record](../../plans/2026-11/22/nfc-reader-intake/implementation.md) for the evidence.
+## ESP32-S2 Cucumber reference
+
+The optional `cucumber_s2_i2c` target uses the same reader logic with GPIO16 SDA and GPIO17 SCL at 100 kHz and address `0x24`. Output is on DEBUG UART0 at 115200 baud. The earlier HSU comparison used GPIO17 TX, GPIO16 RX and switch setting 0/0. Its capture showed an outbound version query and no observed reader ACK. See the [Cucumber reference](README.md#esp32-s2-cucumber-v11-reference).

@@ -6,7 +6,7 @@ firmware:
   root: dev
   path: ESP32Home/nfc-reader
   clone_url: https://github.com/ESP32Home/nfc-reader.git
-  status: scaffolded
+  status: implemented
 firmware_sdd_reference: {root: dev, path: ESP32Home/robot_serial_display}
 cad_workflow: {root: dev, path: VectorMind/cad-context}
 cad_model: {root: dev, path: VectorMind/model-projects/nfc-reader, status: handoff}

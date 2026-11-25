@@ -1,15 +1,11 @@
 # NFC reader firmware specification
 
-**Delivery state** Planned. Build and bench verification are pending.
+The primary `esp32c3` target reads Jewel/Topaz tags through the PN532 at 100 kHz and 7-bit address `0x24`. The reader uses hardware I²C on GPIO0 SDA and GPIO1 SCL with its own 3.3 V pull-ups. The onboard 72×40 OLED uses software I²C on GPIO5 SDA and GPIO6 SCL. Startup reports the PN532 address and version, scan settings and removal debounce on native USB serial at 115200 baud.
 
-The first milestone reads the supplied card with the PN532 and shows its complete UID on the ESP32-C3 board's 0.42-inch OLED. Audio playback is outside this milestone.
+The built-in default is Jewel only with back-to-back scans and 250 ms removal debounce. Print `Jewel tag UID:` with all four bytes in order and preserve leading zeros. Show the eight uppercase hex digits on the OLED in two rows. Return to `SCAN` / `TAG` after removal. A valid empty scan starts the debounce and a later valid empty scan confirms removal. An exchange error or a valid tag read clears the pending timer. Type A and mixed scan modes remain available in the built-in configuration.
 
-| Interface | Firmware contract |
-| --- | --- |
-| Shared hardware I²C | Initialize SDA on GPIO5 and SCL on GPIO6 at 100 kHz. Both drivers must preserve this configuration. |
-| Address scan | Report responding 7-bit addresses over serial so the operator can check for the OLED at 0x3C and PN532 at 0x24 independently. |
-| Reader startup | Query and report the PN532 firmware version. Distinguish an address acknowledgement from a successful command response. |
-| Reader transport | Poll readiness over I²C. The harness has no IRQ or reset lead. The physical switches are set to 1 ON and 2 OFF. |
-| Tag presentation | Show all returned UID bytes in read order, preserving leading zeros. After removal and re-presentation, acquire and display the UID again without rebooting. |
+The owner confirmed Topaz detection. The current back-to-back defaults and C3 OLED path have build evidence. Capture display alignment, hold suppression, removal and re-presentation, and actual scan timing on the current C3 image.
 
-Use the [device README](../../../VectorMind/electro-context/projects/nfc-reader/README.md#bench-checks) for the powered-test prerequisites. A successful build establishes compilation only. The expected addresses and version query must be checked on the assembled hardware.
+## ESP32-S2 Cucumber reference
+
+The `cucumber_s2_i2c` environment runs the same reader logic on GPIO16 SDA and GPIO17 SCL with the DEBUG UART0 console and serial-only tag output.

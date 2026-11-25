@@ -1,11 +1,17 @@
 # Handoff to the NFC reader firmware workspace
 
-Resolve `firmware`, `prototype_reference`, and `firmware_sdd_reference` in the [device manifest](../../../../projects/nfc-reader/project.yaml) using the [host configuration](../../../../config/README.md). If the firmware checkout is missing, clone its `clone_url` into the resolved `firmware` path. Inspect the prototype's PlatformIO configuration and the layout of the reference checkout. Use the prepared firmware workflow below for the bring-up process. Adopt the relevant ESP32-C3 PlatformIO and Arduino settings when implementation is authorized.
+Resolve the `firmware` entry in the [device manifest](../../../../projects/nfc-reader/project.yaml) using the [host configuration](../../../../config/README.md). If the checkout is missing, use its `clone_url` to restore it at the resolved path. Follow the firmware checkout's AGENTS.md and WORKFLOW.md and continue in `.plans/2026/11/22/reader-bringup/`. The manifest also resolves the prototype and historical workflow references.
 
-The [as-built harness](../../../../projects/nfc-reader/README.md#as-built-wiring) uses GPIO5 for SDA and GPIO6 for SCL, shared by the onboard OLED and the PN532. Start at 100 kHz and use 7-bit addresses `0x3C` (OLED) and `0x24` (PN532). The PN532 is set to 1 ON and 2 OFF for I²C. The four-wire harness provides no IRQ or reset lead. Check the chosen driver's polling support before reusing the prototype's NFC code. Keep the first milestone scoped to the bus scan, a firmware-version query and UID display on the OLED.
+The selected configuration is ESP32-C3 with a dedicated PN532 hardware I²C bus on GPIO0/GPIO1, the onboard OLED on GPIO5/GPIO6 software I²C, and Jewel/Topaz-only polling. The owner confirmed Topaz detection in the earlier Jewel-only bench build. Both current targets compiled with back-to-back Jewel polling and 250 ms removal debounce. See the [device interface](../../../../projects/nfc-reader/spec.md#selected-interface) and the [C3 bench procedure](../../../../projects/nfc-reader/README.md#bench-checks).
 
-Build work can proceed independently of the hardware checks. Before powered testing, record continuity, PN532 VCC suitability, and 3.3 V-compatible SDA/SCL levels per the [bench checklist](../../../../projects/nfc-reader/README.md#bench-checks). Return the build target, dependency versions, and any observed scan, firmware version, and repeatable tag-read results. Carry forward any unverified checks.
+## Firmware owner follow-up
 
-## Prepared firmware documentation
+- Update the firmware README's reader pins from the old GPIO5/GPIO6 wiring to GPIO0 SDA and GPIO1 SCL. Put the C3 and Jewel bench flow first. Park the Cucumber target at the end.
+- Refresh the firmware return handoff with the startup text and `Jewel tag UID:` and `Jewel tag removed` events. Keep the older Type A logs as dated evidence.
+- Follow the [remaining bench checks](plan.md#remaining-bench-checks) on the C3 and return the exact image, serial events, OLED observation and measured scan timing. The latest build record has the compiled behavior, while the full on-board sequence is pending.
 
-The [firmware-docs](firmware-docs/) directory contains the requested documentation in target-relative layout. Apply its four Markdown files to the target checkout from a session with write access. The cross-repository links assume the standard layout under the configured `dev` root. The [bring-up plan](firmware-docs/.plans/2026/11/22/reader-bringup/plan.md) is ready for review. PlatformIO configuration and firmware generation await a separate implementation request.
+The [firmware-docs](firmware-docs/) directory holds the Electro-side reference copies in target-relative layout. Their cross-repository links assume the standard layout under the configured `dev` root.
+
+## ESP32-S2 Cucumber reference
+
+Historical handoffs cover [HSU](firmware-docs/.plans/2026/11/22/reader-bringup/handoff-cucumber-hsu.md), [I²C comparison](firmware-docs/.plans/2026/11/22/reader-bringup/handoff-cucumber-i2c.md) and [the earlier poll timeout](firmware-docs/.plans/2026/11/22/reader-bringup/handoff-cucumber-i2c-troubleshooting.md). See the [Cucumber reference](../../../../projects/nfc-reader/README.md#esp32-s2-cucumber-v11-reference) for the current serial-only comparison wiring.
