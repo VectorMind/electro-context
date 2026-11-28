@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="640" viewBox="0 0 1240 640"><title>Lagoon manta board placement review</title><rect width="1240" height="640" fill="#f8faf9"/>
+<text x="32" y="40" font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#193e4d">Lagoon manta  /  Board placement</text>
+<text x="32" y="69" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#193e4d">Outline review   ·   Proposed dimensions in mm</text>
+<line x1="635" y1="90" x2="635" y2="604" stroke="#c4d3d6" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="34" y="107" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#193e4d">Top view</text>
+<g transform="translate(324 541) scale(5 -5)">
+<path d="M0 -1.9 C12 -1.9 16 0 21 5 C29 12 45 15 50 20 C52 22 52 24 52 26 C52 32 43 38 38 49 C34 57 34 67 29 73 C25 78 15 76 8 77 Q3 78 0 80 Q-3 78 -8 77 C-15 76 -25 78 -29 73 C-34 67 -34 57 -38 49 C-43 38 -52 32 -52 26 C-52 24 -52 22 -50 20 C-45 15 -29 12 -21 5 C-16 0 -12 -1.9 0 -1.9Z" fill="#ace0e8" stroke="#256177" stroke-width=".55"/>
+<rect x="-10.025" y="0" width="20.6" height="25" fill="#dbcfec" stroke="#305260" stroke-width=".35"/>
+<rect x="-6.2250000000000005" y="8.6" width="12" height="11" fill="#667d8c" stroke="#305260" stroke-width=".35"/>
+<rect x="-5.4750000000000005" y="12.8" width="10.5" height="6.5" fill="#213e51" stroke="#305260" stroke-width=".35"/>
+<rect x="-4.425" y="-2" width="8.85" height="5.6" fill="#bbc9ce" stroke="#305260" stroke-width=".35"/>
+<rect x="-15.3" y="29" width="40.6" height="42.8" fill="#efc3b8" stroke="#305260" stroke-width=".35"/>
+<circle cx="-7.4999999999999964" cy="36.3" r="1.55" fill="#f8faf9" stroke="#925d54" stroke-width=".3"/>
+<circle cx="18.0" cy="64.3" r="1.55" fill="#f8faf9" stroke="#925d54" stroke-width=".3"/>
+<path d="M-3 50 Q1 52.3 3.8 53 Q5 55 6.2 53 Q9 52.3 13 50 Q9 50.3 6 49 Q5.6 47 5 45.8 Q4.4 47 4 49 Q1 50.3 -3 50Z" fill="none" stroke="#895d55" stroke-width=".42"/>
+</g>
+<line x1="64" y1="567" x2="584" y2="567" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<line x1="64" y1="562" x2="64" y2="572" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<line x1="584" y1="562" x2="584" y2="572" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="324" y="593" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#193e4d">104 wing span</text>
+<line x1="606" y1="141" x2="606" y2="550.5" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<line x1="601" y1="141" x2="611" y2="141" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<line x1="601" y1="550.5" x2="611" y2="550.5" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="596" y="128" font-family="Arial,sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#193e4d">81.9 long</text>
+<text x="346" y="255" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle" fill="#193e4d">PN532</text>
+<text x="347" y="269" font-family="Arial,sans-serif" font-size="12" font-weight="400" text-anchor="middle" fill="#193e4d">pads toward nose</text>
+<text x="401" y="438" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#193e4d">ESP32</text>
+<line x1="394" y1="434" x2="378" y2="434" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="680" y="107" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#193e4d">Side view through the USB-C and OLED</text>
+<text x="680" y="137" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#193e4d">Front at left   ·   PCB tops share a datum</text>
+<g transform="translate(708 345) scale(5.6 -5.6)">
+<path d="M-1.9 0 L-1.9 -6 Q-1.9 -8 1 -8 L72 -8 Q79 -8 80 -3 Q80 3 75 5.8 L30 5.8 Q23 5.8 21 5 L19.5 4.4 L8.6 4.4 Q5 4.6 3 4.5 L-1.9 3.5Z" fill="#daedf0" stroke="#346778" stroke-width=".35"/>
+<rect x="0" y="-1.2" width="25" height="1.2" fill="#dbcfec" stroke="#305260" stroke-width=".35"/>
+<rect x="29" y="-1.5" width="42.8" height="1.5" fill="#efc3b8" stroke="#305260" stroke-width=".35"/>
+<rect x="-2" y="0" width="5.6" height="3" fill="#bbc9ce" stroke="#305260" stroke-width=".35"/>
+<rect x="8.6" y="0" width="11" height="3.8" fill="#667d8c" stroke="#305260" stroke-width=".35"/>
+<path d="M12.8 4.6 L19.3 4.6" stroke="#f8faf9" stroke-width=".8"/>
+</g>
+<text x="680" y="245" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#193e4d">USB-C</text>
+<line x1="705" y1="253" x2="707" y2="324" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="772" y="262" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#193e4d">Fixed OLED</text>
+<line x1="806" y1="269" x2="789" y2="321" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="977" y="246" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#193e4d">Flat tag surface</text>
+<line x1="1034" y1="253" x2="1020" y2="310" stroke="#527481" stroke-width="1.4" stroke-dasharray="none"/>
+<text x="681" y="437" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#193e4d">Trial layout</text>
+<text x="681" y="466" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#193e4d">4 mm between PCB edges; wire bends still need a bench check.</text>
+<text x="681" y="492" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#193e4d">Reader center 5 mm right of USB; engraving centered on reader.</text>
+<text x="681" y="518" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#193e4d">OLED glass 3.8 mm above PCB; USB shell top 3.0 mm.</text>
+<text x="681" y="544" font-family="Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#193e4d">Pale blue profile shows the proposed exterior envelope.</text>
+<text x="32" y="625" font-family="Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#193e4d">Review the wing span, rear body shape, and board placement before the exterior loft.</text>
+</svg>

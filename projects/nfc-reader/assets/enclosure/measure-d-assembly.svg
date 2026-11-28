@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 545" role="img">
+<title>D · Installed heights and harness envelope</title>
+<rect width="1120" height="545" fill="white"/>
+
+<text x="24" y="35" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#17293a" text-anchor="start">D · Installed heights and harness envelope</text>
+<text x="1096" y="32" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="end">mm · schematic</text>
+<text x="27" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Front section · PCB tops aligned on temporary supports</text>
+<rect x="130" y="165" width="280" height="14" rx="0" fill="#e4daf4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="646" y="165" width="266" height="14" rx="0" fill="#f5c7c4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="173" y="129" width="104" height="36" rx="0" fill="#b9cbd9" stroke="#34465c" stroke-width="1.5"/>
+<rect x="308" y="143" width="67" height="22" rx="0" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<rect x="199" y="179" width="76" height="35" rx="0" fill="#536d86" stroke="#34465c" stroke-width="1.5"/>
+<rect x="749" y="124" width="56" height="41" rx="0" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<rect x="676" y="179" width="47" height="15" rx="0" fill="#536d86" stroke="#34465c" stroke-width="1.5"/>
+<path d="M406 161C478 161 505 95 555 95C600 95 603 151 650 156" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#b94343;stroke-width:5"/>
+<path d="M408 173C461 174 474 232 521 232C568 232 597 175 652 172" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#35475b;stroke-width:5"/>
+<line x1="53" y1="165" x2="987" y2="165" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="173" y1="129" x2="95" y2="129" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="130" y1="165" x2="95" y2="165" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="95" y1="129" x2="95" y2="165" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="95,129 91.56,137.00 98.44,137.00" fill="#1555a0"/>
+<polygon points="95,165 98.44,157.00 91.56,157.00" fill="#1555a0"/>
+<rect x="102" y="139.0" width="22" height="16" rx="3" fill="white"/>
+<text x="103" y="152.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D1</text>
+<line x1="308" y1="143" x2="289" y2="143" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="308" y1="165" x2="289" y2="165" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="289" y1="143" x2="289" y2="165" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="289,143 285.85,150.33 292.15,150.33" fill="#1555a0"/>
+<polygon points="289,165 292.15,157.67 285.85,157.67" fill="#1555a0"/>
+<rect x="296" y="146.0" width="22" height="16" rx="3" fill="white"/>
+<text x="297" y="159.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D2</text>
+<line x1="199" y1="179" x2="159" y2="179" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="199" y1="214" x2="159" y2="214" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="159" y1="179" x2="159" y2="214" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="159,179 155.56,187.00 162.44,187.00" fill="#1555a0"/>
+<polygon points="159,214 162.44,206.00 155.56,206.00" fill="#1555a0"/>
+<rect x="166" y="188.5" width="22" height="16" rx="3" fill="white"/>
+<text x="167" y="201.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D3</text>
+<line x1="805" y1="124" x2="846" y2="124" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="805" y1="165" x2="846" y2="165" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="846" y1="124" x2="846" y2="165" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="846,124 842.56,132.00 849.44,132.00" fill="#1555a0"/>
+<polygon points="846,165 849.44,157.00 842.56,157.00" fill="#1555a0"/>
+<rect x="853" y="136.5" width="22" height="16" rx="3" fill="white"/>
+<text x="854" y="149.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D4</text>
+<line x1="723" y1="179" x2="755" y2="179" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="723" y1="194" x2="755" y2="194" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="755" y1="179" x2="755" y2="194" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="755,179 752.85,184.00 757.15,184.00" fill="#1555a0"/>
+<polygon points="755,194 757.15,189.00 752.85,189.00" fill="#1555a0"/>
+<rect x="762" y="178.5" width="22" height="16" rx="3" fill="white"/>
+<text x="763" y="191.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D5</text>
+<line x1="555" y1="93" x2="479" y2="93" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="491" y1="165" x2="479" y2="165" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="479" y1="93" x2="479" y2="165" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="479,93 475.56,101.00 482.44,101.00" fill="#1555a0"/>
+<polygon points="479,165 482.44,157.00 475.56,157.00" fill="#1555a0"/>
+<rect x="486" y="121.0" width="22" height="16" rx="3" fill="white"/>
+<text x="487" y="134.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D6</text>
+<line x1="578" y1="165" x2="578" y2="165" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="521" y1="234" x2="578" y2="234" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="578" y1="165" x2="578" y2="234" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="578,165 574.56,173.00 581.44,173.00" fill="#1555a0"/>
+<polygon points="578,234 581.44,226.00 574.56,226.00" fill="#1555a0"/>
+<rect x="585" y="191.5" width="22" height="16" rx="3" fill="white"/>
+<text x="586" y="204.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D7</text>
+<text x="988" y="169" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">PCB tops</text>
+<text x="27" y="280" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Top view · wired assembly at its relaxed spacing</text>
+<rect x="130" y="305" width="280" height="166" rx="5" fill="#e4daf4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="646" y="300" width="266" height="145" rx="5" fill="#f5c7c4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="212" y="445" width="88" height="45" rx="5" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<path d="M409 337 C468 337 485 318 526 318 C567 318 587 347 646 347" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#b94343;stroke-width:4"/>
+<path d="M409 352 C468 352 485 345 526 345 C567 345 587 363 646 363" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#35475b;stroke-width:4"/>
+<path d="M409 376 C468 376 485 371 526 371 C567 371 587 382 646 382" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#1766ac;stroke-width:4"/>
+<path d="M409 394 C468 394 485 411 526 411 C567 411 587 401 646 401" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#b78116;stroke-width:4"/>
+<line x1="410" y1="420" x2="410" y2="451" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="646" y1="420" x2="646" y2="451" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="410" y1="451" x2="646" y2="451" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="410,451 418.00,454.44 418.00,447.56" fill="#1555a0"/>
+<polygon points="646,451 638.00,447.56 638.00,454.44" fill="#1555a0"/>
+<rect x="518.0" y="433" width="22" height="16" rx="3" fill="white"/>
+<text x="528.0" y="446" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">D8</text>
+<line x1="912" y1="445" x2="941" y2="445" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="410" y1="471" x2="941" y2="471" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="941" y1="445" x2="941" y2="471" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="941,445 937.56,453.00 944.44,453.00" fill="#1555a0"/>
+<polygon points="941,471 944.44,463.00 937.56,463.00" fill="#1555a0"/>
+<rect x="948" y="450.0" width="22" height="16" rx="3" fill="white"/>
+<text x="949" y="463.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D9</text>
+<line x1="526" y1="316" x2="474" y2="316" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="410" y1="471" x2="474" y2="471" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="474" y1="316" x2="474" y2="471" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="474,316 470.56,324.00 477.44,324.00" fill="#1555a0"/>
+<polygon points="474,471 477.44,463.00 470.56,463.00" fill="#1555a0"/>
+<rect x="481" y="385.5" width="32" height="16" rx="3" fill="white"/>
+<text x="482" y="398.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D10</text>
+<line x1="526" y1="413" x2="597" y2="413" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="646" y1="471" x2="597" y2="471" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="597" y1="413" x2="597" y2="471" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="597,413 593.56,421.00 600.44,421.00" fill="#1555a0"/>
+<polygon points="597,471 600.44,463.00 593.56,463.00" fill="#1555a0"/>
+<rect x="604" y="434.0" width="32" height="16" rx="3" fill="white"/>
+<text x="605" y="447.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">D11</text>
+<line x1="410" y1="471" x2="959" y2="471" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="130" y="514" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Use the straight front edge of the ESP32 PCB as the offset datum.</text>
+</svg>

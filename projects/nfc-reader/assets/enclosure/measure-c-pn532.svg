@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 492" role="img">
+<title>C · PN532 board and mounting holes</title>
+<rect width="1120" height="492" fill="white"/>
+
+<text x="24" y="35" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#17293a" text-anchor="start">C · PN532 board and mounting holes</text>
+<text x="1096" y="32" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="end">mm · schematic</text>
+<text x="27" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Component-side top view</text>
+<path d="M290 125H613L633 145V365L613 385H290L270 365V145Z" fill="#f5c7c4" stroke="#34465c" stroke-width="1.5" />
+<path d="M302 141H601L617 157V353L601 369H302L286 353V157Z" fill="none" stroke="#34465c" stroke-width="1.5" />
+<circle cx="320" cy="173" r="15" fill="white" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="584" cy="330" r="15" fill="white" stroke="#34465c" stroke-width="1.5"/>
+<line x1="300" y1="173" x2="340" y2="173" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="320" y1="153" x2="320" y2="193" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="564" y1="330" x2="604" y2="330" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="584" y1="310" x2="584" y2="350" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<circle cx="325" cy="222" r="4" fill="white" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="325" cy="240" r="4" fill="white" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="325" cy="258" r="4" fill="white" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="325" cy="276" r="4" fill="white" stroke="#34465c" stroke-width="1.5"/>
+<rect x="421" y="220" width="60" height="47" rx="3" fill="#536d86" stroke="#34465c" stroke-width="1.5"/>
+<line x1="270" y1="145" x2="270" y2="99" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="633" y1="145" x2="633" y2="99" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="270" y1="99" x2="633" y2="99" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="270,99 278.00,102.44 278.00,95.56" fill="#1555a0"/>
+<polygon points="633,99 625.00,95.56 625.00,102.44" fill="#1555a0"/>
+<rect x="441.5" y="81" width="22" height="16" rx="3" fill="white"/>
+<text x="451.5" y="94" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">C1</text>
+<line x1="290" y1="125" x2="114" y2="125" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="290" y1="385" x2="114" y2="385" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="114" y1="125" x2="114" y2="385" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="114,125 110.56,133.00 117.44,133.00" fill="#1555a0"/>
+<polygon points="114,385 117.44,377.00 110.56,377.00" fill="#1555a0"/>
+<rect x="121" y="247.0" width="22" height="16" rx="3" fill="white"/>
+<text x="122" y="260.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">C2</text>
+<line x1="270" y1="173" x2="270" y2="207" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="320" y1="173" x2="320" y2="207" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="270" y1="207" x2="320" y2="207" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="270,207 278.00,210.44 278.00,203.56" fill="#1555a0"/>
+<polygon points="320,207 312.00,203.56 312.00,210.44" fill="#1555a0"/>
+<rect x="285.0" y="189" width="22" height="16" rx="3" fill="white"/>
+<text x="295.0" y="202" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">C4</text>
+<line x1="320" y1="173" x2="170" y2="173" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="290" y1="385" x2="170" y2="385" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="170" y1="173" x2="170" y2="385" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="170,173 166.56,181.00 173.44,181.00" fill="#1555a0"/>
+<polygon points="170,385 173.44,377.00 166.56,377.00" fill="#1555a0"/>
+<rect x="177" y="271.0" width="22" height="16" rx="3" fill="white"/>
+<text x="178" y="284.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">C5</text>
+<line x1="270" y1="365" x2="270" y2="414" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="584" y1="330" x2="584" y2="414" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="270" y1="414" x2="584" y2="414" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="270,414 278.00,417.44 278.00,410.56" fill="#1555a0"/>
+<polygon points="584,414 576.00,410.56 576.00,417.44" fill="#1555a0"/>
+<rect x="417.0" y="396" width="22" height="16" rx="3" fill="white"/>
+<text x="427.0" y="409" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">C6</text>
+<line x1="599" y1="330" x2="674" y2="330" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="613" y1="385" x2="674" y2="385" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="674" y1="330" x2="674" y2="385" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="674,330 670.56,338.00 677.44,338.00" fill="#1555a0"/>
+<polygon points="674,385 677.44,377.00 670.56,377.00" fill="#1555a0"/>
+<rect x="681" y="349.5" width="22" height="16" rx="3" fill="white"/>
+<text x="682" y="362.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">C7</text>
+<line x1="376" y1="170" x2="334" y2="171" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="334,171 342.08,174.25 341.92,167.37" fill="#1555a0"/>
+<rect x="379" y="161" width="22" height="16" rx="3" fill="white"/>
+<text x="380" y="174" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">C8</text>
+<line x1="548" y1="291" x2="577" y2="317" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="577,317 573.34,309.10 568.75,314.22" fill="#1555a0"/>
+<rect x="551" y="282" width="22" height="16" rx="3" fill="white"/>
+<text x="552" y="295" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">C9</text>
+<line x1="270" y1="365" x2="270" y2="385" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="270" y1="385" x2="290" y2="385" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<circle cx="270" cy="385" r="4" fill="#1555a0" stroke="#34465c" stroke-width="1.5"/>
+<text x="100" y="458" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Virtual front-left corner where the straight edges meet</text>
+<line x1="276" y1="442" x2="270" y2="391" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="769" y="109" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Bare PCB edge section</text>
+<rect x="780" y="135" width="211" height="23" rx="0" fill="#f5c7c4" stroke="#34465c" stroke-width="1.5"/>
+<line x1="991" y1="135" x2="1028" y2="135" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="991" y1="158" x2="1028" y2="158" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="1028" y1="135" x2="1028" y2="158" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="1028,135 1024.70,142.67 1031.30,142.67" fill="#1555a0"/>
+<polygon points="1028,158 1031.30,150.33 1024.70,150.33" fill="#1555a0"/>
+<rect x="1035" y="138.5" width="22" height="16" rx="3" fill="white"/>
+<text x="1036" y="151.5" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">C3</text>
+<text x="769" y="257" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Four wired pads face the ESP32.</text>
+<text x="769" y="283" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Front is the edge nearest you.</text>
+<text x="769" y="309" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Measure the open bore of each hole.</text>
+</svg>

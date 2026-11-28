@@ -52,6 +52,8 @@ The PN532 uses hardware I²C at **100 kHz**, 7-bit address **0x24**. The OLED st
 
 The bench setup uses the two development boards. The [enclosure and harness concept](spec.md#enclosure-and-harness-concept) covers the board gap, the USB and display openings, and the coil-to-lid spacing for a first mockup.
 
+The [enclosure log](enclosure.md) collects the concept sketches, dimensioned drawings, prototype measurements, and CAD renders by iteration.
+
 ## ESP32-S2 Cucumber v1.1 reference
 
 ### I²C comparison on the Cucumber

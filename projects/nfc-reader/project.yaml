@@ -9,7 +9,7 @@ firmware:
   status: implemented
 firmware_sdd_reference: {root: dev, path: ESP32Home/robot_serial_display}
 cad_workflow: {root: dev, path: VectorMind/cad-context}
-cad_model: {root: dev, path: VectorMind/model-projects/nfc-reader, status: handoff}
+cad_model: {root: dev, path: VectorMind/model-projects/nfc-reader, status: first-fit-base}
 website: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io}
 article: {root: dev, path: HomeSmartMesh/homesmartmesh.github.io/content/microcontrollers/esp32/nfc-reader/readme.md, status: draft}
 project_readme: {root: project, path: README.md}

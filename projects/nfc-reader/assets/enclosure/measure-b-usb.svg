@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 400" role="img">
+<title>B · USB-C receptacle and cable</title>
+<rect width="1120" height="400" fill="white"/>
+
+<text x="24" y="35" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#17293a" text-anchor="start">B · USB-C receptacle and cable</text>
+<text x="1096" y="32" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="end">mm · schematic</text>
+<text x="27" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Front view, cable removed</text>
+<rect x="96" y="213" width="315" height="21" rx="0" fill="#e4daf4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="170" y="147" width="155" height="56" rx="17" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<rect x="183" y="158" width="129" height="33" rx="11" fill="#536d86" stroke="#34465c" stroke-width="1.5"/>
+<line x1="170" y1="147" x2="170" y2="125" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="325" y1="147" x2="325" y2="125" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="170" y1="125" x2="325" y2="125" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="170,125 178.00,128.44 178.00,121.56" fill="#1555a0"/>
+<polygon points="325,125 317.00,121.56 317.00,128.44" fill="#1555a0"/>
+<rect x="237.5" y="107" width="22" height="16" rx="3" fill="white"/>
+<text x="247.5" y="120" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">B1</text>
+<line x1="325" y1="147" x2="352" y2="147" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="325" y1="203" x2="352" y2="203" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="352" y1="147" x2="352" y2="203" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="352,147 348.56,155.00 355.44,155.00" fill="#1555a0"/>
+<polygon points="352,203 355.44,195.00 348.56,195.00" fill="#1555a0"/>
+<rect x="359" y="167.0" width="22" height="16" rx="3" fill="white"/>
+<text x="360" y="180.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">B2</text>
+<line x1="96" y1="234" x2="96" y2="275" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="170" y1="203" x2="170" y2="275" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="96" y1="275" x2="170" y2="275" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="96,275 104.00,278.44 104.00,271.56" fill="#1555a0"/>
+<polygon points="170,275 162.00,271.56 162.00,278.44" fill="#1555a0"/>
+<rect x="123.0" y="257" width="22" height="16" rx="3" fill="white"/>
+<text x="133.0" y="270" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">B3</text>
+<line x1="325" y1="203" x2="427" y2="203" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="411" y1="213" x2="427" y2="213" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="427" y1="203" x2="427" y2="213" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="427,203 425.57,206.33 428.43,206.33" fill="#1555a0"/>
+<polygon points="427,213 428.43,209.67 425.57,209.67" fill="#1555a0"/>
+<rect x="434" y="200.0" width="22" height="16" rx="3" fill="white"/>
+<text x="435" y="213.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">B5</text>
+<text x="96" y="304" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">PCB left edge</text>
+<text x="473" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Side view, cable fully seated</text>
+<rect x="507" y="213" width="183" height="21" rx="0" fill="#e4daf4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="588" y="147" width="158" height="56" rx="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<rect x="746" y="162" width="41" height="27" rx="0" fill="#eef2f5" stroke="#34465c" stroke-width="1.5"/>
+<rect x="787" y="121" width="141" height="108" rx="8" fill="#bdc8d4" stroke="#34465c" stroke-width="1.5"/>
+<path d="M928 169H967V185H928" fill="none" stroke="#34465c" stroke-width="1.5" />
+<line x1="690" y1="204" x2="690" y2="267" stroke="#47627a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<line x1="690" y1="234" x2="690" y2="262" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="746" y1="203" x2="746" y2="262" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="690" y1="262" x2="746" y2="262" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="690,262 698.00,265.44 698.00,258.56" fill="#1555a0"/>
+<polygon points="746,262 738.00,258.56 738.00,265.44" fill="#1555a0"/>
+<rect x="708.0" y="244" width="22" height="16" rx="3" fill="white"/>
+<text x="718.0" y="257" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">B4</text>
+<line x1="746" y1="147" x2="746" y2="102" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="787" y1="121" x2="787" y2="102" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="746" y1="102" x2="787" y2="102" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="746,102 754.00,105.44 754.00,98.56" fill="#1555a0"/>
+<polygon points="787,102 779.00,98.56 779.00,105.44" fill="#1555a0"/>
+<rect x="756.5" y="84" width="22" height="16" rx="3" fill="white"/>
+<text x="766.5" y="97" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">B8</text>
+<line x1="892" y1="121" x2="948" y2="121" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="892" y1="229" x2="948" y2="229" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="948" y1="121" x2="948" y2="229" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="948,121 944.56,129.00 951.44,129.00" fill="#1555a0"/>
+<polygon points="948,229 951.44,221.00 944.56,221.00" fill="#1555a0"/>
+<rect x="955" y="167.0" width="22" height="16" rx="3" fill="white"/>
+<text x="956" y="180.0" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">B7</text>
+<text x="530" y="291" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Front PCB edge</text>
+<line x1="661" y1="286" x2="690" y2="267" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="804" y="289" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Overmold</text>
+<text x="27" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Cable overmold, viewed along insertion axis</text>
+<rect x="560" y="313" width="176" height="62" rx="10" fill="#bdc8d4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="618" y="333" width="60" height="22" rx="7" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<line x1="560" y1="344" x2="560" y2="389" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="736" y1="344" x2="736" y2="389" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="560" y1="389" x2="736" y2="389" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="560,389 568.00,392.44 568.00,385.56" fill="#1555a0"/>
+<polygon points="736,389 728.00,385.56 728.00,392.44" fill="#1555a0"/>
+<rect x="638.0" y="371" width="22" height="16" rx="3" fill="white"/>
+<text x="648.0" y="384" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="middle">B6</text>
+</svg>

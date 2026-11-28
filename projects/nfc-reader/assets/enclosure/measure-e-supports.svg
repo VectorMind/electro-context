@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 434" role="img">
+<title>E · ESP32 underside support locations</title>
+<rect width="1120" height="434" fill="white"/>
+
+<text x="24" y="35" font-family="Arial,sans-serif" font-size="25" font-weight="bold" fill="#17293a" text-anchor="start">E · ESP32 underside support locations</text>
+<text x="1096" y="32" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="end">mm · schematic</text>
+<text x="27" y="69" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Underside view · flip left to right, keep USB-C nearest you</text>
+<rect x="200" y="101" width="340" height="255" rx="6" fill="#e4daf4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="310" y="332" width="116" height="51" rx="7" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<rect x="308" y="162" width="117" height="118" rx="3" fill="#536d86" stroke="#34465c" stroke-width="1.5"/>
+<rect x="386" y="117" width="50" height="29" rx="3" fill="#536d86" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="123" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="123" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="150" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="150" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="190" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="190" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="215" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="215" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="245" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="245" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="272" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="272" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="298" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="298" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="225" cy="326" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="513" cy="326" r="6" fill="#dce3e9" stroke="#34465c" stroke-width="1.5"/>
+<path d="M224 150C190 146 168 180 137 158M224 123C185 120 178 144 137 137" fill="none" stroke="#34465c" stroke-width="1.5" style="stroke:#b94343;stroke-width:4"/>
+<rect x="200" y="307" width="33" height="14" rx="0" fill="#b7dfc8" stroke="#34465c" stroke-width="1.5"/>
+<rect x="526" y="276" width="14" height="19" rx="0" fill="#b7dfc8" stroke="#34465c" stroke-width="1.5"/>
+<line x1="161" y1="304" x2="205" y2="314" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="205,314 197.96,308.87 196.44,315.58" fill="#1555a0"/>
+<rect x="164" y="295" width="22" height="16" rx="3" fill="white"/>
+<text x="165" y="308" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">E1</text>
+<line x1="571" y1="273" x2="535" y2="286" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="535,286 543.69,286.52 541.36,280.05" fill="#1555a0"/>
+<rect x="574" y="264" width="22" height="16" rx="3" fill="white"/>
+<text x="575" y="277" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">E2</text>
+<circle cx="540" cy="356" r="4" fill="#1555a0" stroke="#34465c" stroke-width="1.5"/>
+<line x1="538" y1="356" x2="474" y2="356" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="474,356 482.00,359.44 482.00,352.56" fill="#1555a0"/>
+<line x1="540" y1="354" x2="540" y2="333" stroke="#1555a0" stroke-width="1.5"/>
+<polygon points="540,333 536.99,340.00 543.01,340.00" fill="#1555a0"/>
+<rect x="462" y="337" width="12" height="16" rx="3" fill="white"/>
+<text x="463" y="350" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">x</text>
+<rect x="547" y="320" width="12" height="16" rx="3" fill="white"/>
+<text x="548" y="333" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#124889" text-anchor="start">y</text>
+<text x="572" y="360" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Same corner as A, now on the right</text>
+<text x="700" y="135" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#17293a" text-anchor="start">Example contact patch</text>
+<rect x="715" y="161" width="274" height="151" rx="0" fill="#e4daf4" stroke="#34465c" stroke-width="1.5"/>
+<rect x="796" y="197" width="107" height="54" rx="0" fill="#b7dfc8" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="796" cy="251" r="4" fill="#1555a0" stroke="#34465c" stroke-width="1.5"/>
+<circle cx="903" cy="197" r="4" fill="#1555a0" stroke="#34465c" stroke-width="1.5"/>
+<text x="786" y="274" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="end">One corner</text>
+<line x1="790" y1="268" x2="796" y2="255" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="917" y="189" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Opposite corner</text>
+<line x1="917" y1="192" x2="907" y2="197" stroke="#7094ba" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="700" y="334" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Record both corners as (x, y).</text>
+<text x="27" y="409" font-family="Arial,sans-serif" font-size="14" font-weight="normal" fill="#4b5f70" text-anchor="start">Green patches are examples. Choose actual bare spots on your board and mark them on a photo.</text>
+</svg>

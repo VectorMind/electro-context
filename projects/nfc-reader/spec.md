@@ -24,23 +24,26 @@ Use separate 3.3 V-compatible pull-ups on the PN532 bus. Establish the reader su
 
 ## Enclosure and harness concept
 
-Keep both PCBs face up, with the ESP32 on the left, USB-C toward the near wall, and the PN532 on the right with its four-pin header facing inward. Solder the harness with both boards out of the enclosure. Route all four insulated reader leads from the facing C3 edge through the gap. Keep power and signal leads identifiable at both ends. Leave a small service loop and strain-relieve the wires to the base.
+In the Lagoon manta, place both boards face up with USB-C at the nose, the PN532 behind the ESP32, and their left PCB edges aligned. Turn the PN532 wired pads toward the ESP32. Center the engraved Little Ray on the outer shell and keep its entire outline over the reader footprint. Solder the harness with both boards out of the enclosure. Keep power and signal leads identifiable at both ends. Leave a small service loop and strain-relieve the wires to the base.
 
 | Feature | First prototype allowance |
 | --- | --- |
-| Gap between PCB edges, direct solder | Start at 8–10 mm. Try 6 mm only after fitting the insulated bends on a mockup. Solder the boards outside the case. |
+| Earlier side-by-side base only | Align the front PCB edges and leave 12 mm between the facing edges. At this gap the owner reports a 4.4 mm wire height above the PCB tops. Reserve the full 25 mm ESP32 depth in the gap and check the solder joints and lid clearance on the first fit. |
 | Gap with opposing right-angle headers and female plugs | Measure each plug installed, from PCB edge to the start of the flexible wire. Add both projections and 5–8 mm for the bends. Begin the plug-in test with the boards loose. |
-| Space under boards | Measure from PCB underside to the lowest solder tail, plug or wire bend and add 1–2 mm. Give the harness its own underside channel. |
-| ESP32 retention | Use two short edge ledges or clips and an end stop. Support the unsoldered edge at clear spots and relieve the clip around the soldered edge and USB port. Leave room for the actual USB plug and its overmold. |
-| PN532 retention | Use the two diagonal mounting holes on plastic posts. Start with nylon fasteners and route the harness away from the coil perimeter. Keep nearby metal and the ESP32 PCB out of the area directly above or below the coil. |
+| Space under boards | The lowest reported rigid projections are 2.4 mm under the ESP32 center and 3.5 mm under the PN532 at the solder points. Allow 1–2 mm beyond these features in the relief areas. The current harness routes above the PCB tops. |
+| ESP32 retention | Locate the PCB at its edges and use a 3 mm-wide underside ledge along each side where the underside is flush. Relieve any projecting solder and leave a central pocket. Keep the lid clear of the top-side pin rows. |
+| PN532 retention | Locate the PCB at its perimeter. Use the two diagonal mounting holes on plastic posts if the measured fit permits. Start with nylon fasteners and route the harness away from the coil perimeter. Keep nearby metal and the ESP32 PCB out of the area directly above or below the coil. |
+| USB-C opening | Form the near-wall opening with two open-ended notches, one in each shell, both opening onto the mating seam. Each part prints with its notch open to the edge. Allow the actual plug to seat fully, including clearance for its overmold. React insertion and withdrawal loads at the board retainers. |
 | NFC lid | Put a roughly 1.0–1.2 mm unfilled plastic test panel over the coil. Set the PN532 post height from the tallest component under the cover, plus 0.5–1 mm air clearance. Test the actual tag through this panel before fixing the lid thickness or module orientation. |
-| Display and buttons | Give the OLED its own lid cutout and keep the lid off the glass. Start with open access to BOOT and RESET. Reserve room for a later flexible insert or printed plungers. |
+| Display and buttons | Lower the lid locally around the OLED opening and keep the bezel off the glass. Give the wire bends a higher roof. Cover BOOT and RESET and leave clearance above them. |
 
-Measure PCB outlines, hole centers and diameters, maximum component and underside heights, USB-C plug clearance, and the OLED and button centers on the actual hardware. The allowances above are mockup dimensions pending fit and read tests.
+The owner's top, side and underside assembly photos and measurement report from 2026-11-28 document the as-built geometry. Verify the ledge contact and the 12 mm wire fit on the first print.
+
+Use the [dimensioned sketches and measurement record](enclosure.md#measurements-for-the-first-cad-fit) to capture the as-built board, display, connector, harness, and support geometry. The allowances above are mockup dimensions pending fit and read tests.
 
 ## Bench verification
 
-The owner reports working Jewel detection. The firmware implementation record confirms builds for the current C3 OLED and shared back-to-back Jewel configuration. Complete the C3 power and bus-level checks, compare the on-panel digits with the serial UID, and record hold, removal, re-presentation and scan latency on the current image. Measure the module's mounting points and read range through the intended face material before setting enclosure dimensions. Supply measurements, final connector and PCB layout remain open.
+The owner reports working Jewel detection. The firmware implementation record confirms builds for the current C3 OLED and shared back-to-back Jewel configuration. Complete the C3 power and bus-level checks, compare the on-panel digits with the serial UID, and record hold, removal, re-presentation and scan latency on the current image. Test the measured module layout through the intended face material before fixing the tap face thickness. Supply measurements, final connector and PCB layout remain open.
 
 ## ESP32-S2 Cucumber reference
 
