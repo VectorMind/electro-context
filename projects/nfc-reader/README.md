@@ -2,6 +2,8 @@
 
 The primary build pairs an **ESP32-C3** with a **PN532 V3** on a dedicated I²C bus and defaults to **Jewel/Topaz tags**. The onboard 0.42-inch OLED uses a separate bus for the scan prompt and UID. The owner confirmed Topaz detection using a WhizTags Topaz 512. The [device specification](spec.md) records the current interface and remaining bench checks.
 
+The [Manta tag-to-sound concepts](audio-concept.md) compare four ways to connect and power the reader, phone and speaker.
+
 ## Board top views
 
 | ESP32-C3 with 0.42-inch OLED | PN532 NFC Module V3 |
